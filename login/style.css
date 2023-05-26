@@ -77,3 +77,12 @@ input {
     border: 2px solid var(--cinza);
     padding: 12px 15px;
 }
+
+.rodape {
+    display: flex;
+ 
+}
+
+.rodape img {
+    margin-left: 10px;
+}
