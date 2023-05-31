@@ -8,6 +8,7 @@
     --azulmar: #1E455F;
     --azulesc: #003D73;
     --azulclr: #1B77C2;
+    --azulclr2: #135a94;
     --branco: #FFFFFF;
     --preto: #000000;
     --cinza: #C1C3C8;
@@ -110,7 +111,29 @@ form input {
     width: 100%;
     height: 40px;
     padding-left: 8px;
+    text-indent: 5px;
     
+}
+
+
+    
+
+
+.olho {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+.olho img {
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    right: 15px;
 }
 
 
@@ -146,14 +169,18 @@ form input {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
-
-}
+}  
 
 .btn a {
     color: var(--branco);
     text-decoration: none;
 }
+
+.btn:hover {
+    background-color: var(--azulclr2);
+    text-decoration: none;cursor: pointer;
+}
+
 
 .esqueceu {
     width: 100%;
