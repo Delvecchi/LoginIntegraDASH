@@ -25,7 +25,8 @@ body {
 }
 
 .esquerdo {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -34,7 +35,8 @@ body {
 
 .direito {
     background-color: var(--azulesc);
-    width: 1600px;
+    max-width: 1600px;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -52,18 +54,27 @@ body {
 
 .logo {
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    justify-content: flex-end;
     width: 100%;
     height: 30vh;
-    
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+
 }
 
-.logo img {
-    height: 110px;
-    width: 180px;
-    
+.imagem1 {
+    /*height: 110px;*/
+    width: 60%;
 
+
+}
+
+.imagem2 {
+    display: none;
+    /*background-color: #1E455F;*/
+    /*height: 200%;*/
+    width: 100%;
 }
 
 .main {
@@ -75,7 +86,7 @@ body {
     justify-content: center;
     font-size: 18px;
     font-weight: 800;
-    
+
     padding: 10px 10px;
 
 }
@@ -112,11 +123,11 @@ form input {
     height: 40px;
     padding-left: 8px;
     text-indent: 5px;
-    
+
 }
 
 
-    
+
 
 
 .olho {
@@ -169,7 +180,7 @@ form input {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-}  
+}
 
 .btn a {
     color: var(--branco);
@@ -178,7 +189,8 @@ form input {
 
 .btn:hover {
     background-color: var(--azulclr2);
-    text-decoration: none;cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -189,12 +201,16 @@ form input {
     color: var(--cinza);
 }
 
+.clique {
+    text-align: end;
+}
 
 .clique a {
     text-decoration: none;
     padding-left: 5px;
     color: var(--azulmar);
 }
+
 
 
 
@@ -212,4 +228,55 @@ form input {
 
 .desenvolvido img {
     padding-left: 3px;
+}
+
+@media screen and (max-width: 768px) {
+    .direito {
+        display: none;
+    }
+
+    .esquerdo {
+        margin-top: 140px;
+    }
+
+    .imagem1 {
+        display: none;
+    }
+
+    .imagem2 {
+        display: flex;
+        margin: 60px 0;
+        justify-content: center;
+        align-items: flex-end;
+        
+    }
+
+    .imagem2 img {
+        width: 60%;
+    }
+
+    body {
+        background-image: url(../img/Fundo\ dash.png);
+        background-repeat: no-repeat;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    form input {
+        color: var(--azulesc);
+    }
+
+    .checkbox {
+        color: var(--azulesc);
+    }
+
+    .esqueceu {
+        color: var(--preto);
+    }
+
+    .desenvolvido {
+        display: none;
+    }
 }
